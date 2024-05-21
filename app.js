@@ -15,7 +15,6 @@ async function fetchProducts() {
 
   // Clear product list
   productList.innerHTML = "";
-
   // Add each product to the list
   products.forEach((product) => {
     const li = document.createElement("li");
@@ -26,7 +25,7 @@ async function fetchProducts() {
 
     // Add delete button for each product
     const deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "Delete";
+    deleteButton.innerHTML = "Deletar";
     deleteButton.addEventListener("click", async () => {
       await deleteProduct(product.id);
       await fetchProducts();
@@ -35,7 +34,7 @@ async function fetchProducts() {
 
     // Add update button for each product
     const updateButton = document.createElement("button");
-    updateButton.innerHTML = "Update";
+    updateButton.innerHTML = "Editar";
     updateButton.addEventListener("click", async () => {
       const name = addProductForm.elements["name"].value;
       const price = addProductForm.elements["price"].value;
