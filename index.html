@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product CRUD</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Product CRUD</h1>
+
+    <form id="add-product-form">
+      <h2>Add Product</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required step="0.01" />
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="products"></ul>
+
+    <script src="app.js"></script>
+    <script>
+      // Call fetchProducts() when the page loads
+      window.addEventListener("load", fetchProducts);
+    </script>
+  </body>
+</html>
